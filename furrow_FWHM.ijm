@@ -13,8 +13,8 @@ for (i = 1; i < 100; i++) {
 	
 	sample_id = getNumber("enter 0 for control, 1 for experiment", 0) ; 
 	run("Duplicate...", "title=temporary_image");
-	Stack.setChannel(2);
-	run("Delete Slice", "delete=channel");
+	//Stack.setChannel(2);
+	//run("Delete Slice", "delete=channel");
 	run("Grays");
 	
 	selectWindow(fileName);
@@ -33,7 +33,7 @@ for (i = 1; i < 100; i++) {
 	run("Clear Results");
 	
 	selectWindow("temporary_image");
-	saveAs("Tiff", dir + "0_furrow_images/" + 
+	saveAs("Tiff", dir + "0_furrow_images_111ish/" + 
 						 sample_id +"_"+ 		// control or expmnt
 						 current_frame +"_"+ 	// frame analyzed
 						 x_start_furrow +"_"+ 	// x coord for start of line encapsulating furrow
